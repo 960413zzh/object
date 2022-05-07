@@ -28,14 +28,14 @@ from utils.util import get_timestamp
 from validation import epochVal, epochVal_metrics
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--root_path', type=str, default="D:/Dataset_01/cifar_10_1", help='dataset root dir')
+parser.add_argument('--root_path', type=str, default="../input/cifar-10-data", help='dataset root dir')
 parser.add_argument('--csv_file_train', type=str, default="D:/Dataset_01/cifar10_training.csv", help='training set csv file')
 # parser.add_argument('--csv_file_val', type=str, default='C:/Users/30812/Desktop/Test code of skin/SRC-MT-master/data/skin/validation.csv', help='validation set csv file')
 parser.add_argument('--csv_file_test', type=str, default="D:/Dataset_01/cifar10_testing.csv", help='testing set csv file')
 parser.add_argument('--exp', type=str,  default='xxxx', help='model_name')
 parser.add_argument('--epochs', type=int,  default=100, help='maximum epoch number to train')
-parser.add_argument('--batch_size', type=int, default=2, help='batch_size per gpu')
-parser.add_argument('--labeled_bs', type=int, default=1, help='number of labeled data per batch')
+parser.add_argument('--batch_size', type=int, default=16, help='batch_size per gpu')
+parser.add_argument('--labeled_bs', type=int, default=4, help='number of labeled data per batch')
 parser.add_argument('--drop_rate', type=int, default=0.2, help='dropout rate')
 parser.add_argument('--ema_consistency', type=int, default=1, help='whether train baseline model')
 parser.add_argument('--labeled_num', type=int, default=4000, help='number of labeled')
